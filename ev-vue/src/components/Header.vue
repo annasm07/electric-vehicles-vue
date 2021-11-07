@@ -1,10 +1,13 @@
 <template>
-  <div class="hello">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="header">
+    <div class="header__logo">
+      <router-link class="logo" to="/">Home</router-link>
     </div>
-    <h1>{{ msg }}</h1>
+    <div class="header__navigation">
+      <router-link class="navigation__item" to="/stations">Stations</router-link>
+      <router-link class="navigation__item" to="/cars">Cars</router-link>
+      <router-link class="navigation__item" to="/routes">Routes</router-link>
+    </div>
   </div>
 </template>
 
@@ -13,38 +16,35 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Header',
-  props: {
-    msg: String,
-  },
+  // props: {
+  //   msg: String,
+  // },
 });
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#nav {
-  padding: 30px;
+.header {
+  display: flex;
+  margin: 20px 8%;
+  &__logo{
+    width: 30%;
+  }
 
+&__navigation{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
   a {
+    margin-right: 10%;
     font-weight: bold;
     color: #2c3e50;
+    text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #279664;
     }
   }
-}
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
 }
 </style>
