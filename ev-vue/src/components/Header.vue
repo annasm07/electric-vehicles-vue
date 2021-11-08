@@ -1,7 +1,9 @@
 <template>
   <div class="header">
     <div class="header__logo">
-      <router-link class="logo" to="/">Home</router-link>
+      <router-link class="logo" to="/">
+      <img src="../assets/ev.svg" alt="ev-logo">
+      </router-link>
     </div>
     <div class="header__navigation">
       <router-link class="navigation__item" to="/stations">Stations</router-link>
@@ -26,23 +28,25 @@ export default defineComponent({
 <style scoped lang="scss">
 .header {
   display: flex;
-  margin: 10px 8%;
+  margin: 8px 8%;
   padding: 10px;
   border-style: none none solid none;
   border-width: 2px;
   color: #279664;
   &__logo{
-    width: 0%;
+    width: 50px;
   }
 
 &__navigation{
+  font-size: 18px;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
 }
   a {
     margin: 0 5%;
-    font-weight: bold;
+    font-weight: 500;
     color: #2c3e50;
     text-decoration: none;
 
