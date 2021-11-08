@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="app__header">
      <Header/>
     <router-view />
   </div>
@@ -23,9 +23,5 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-}
-.header{
-  border-color: #279664;
-  border-bottom: 3px;
 }
 </style>

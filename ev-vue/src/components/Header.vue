@@ -26,9 +26,13 @@ export default defineComponent({
 <style scoped lang="scss">
 .header {
   display: flex;
-  margin: 20px 8%;
+  margin: 10px 8%;
+  padding: 10px;
+  border-style: none none solid none;
+  border-width: 2px;
+  color: #279664;
   &__logo{
-    width: 30%;
+    width: 0%;
   }
 
 &__navigation{
@@ -37,7 +41,7 @@ export default defineComponent({
   width: 100%;
 }
   a {
-    margin-right: 10%;
+    margin: 0 5%;
     font-weight: bold;
     color: #2c3e50;
     text-decoration: none;
